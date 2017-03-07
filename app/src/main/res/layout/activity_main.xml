@@ -1,8 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
 
     <android.opengl.GLSurfaceView
         android:id="@+id/gl_surface_view"
@@ -17,20 +18,13 @@
         android:background="@android:color/white"
         android:orientation="vertical">
 
-        <TextView
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello from TextView"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"/>
-
-        <WebView
-            android:id="@+id/web_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            app:lottie_fileName="LottieLogo2.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true" />
 
     </com.self.viewtoglrendering.GLLinearLayout>
 
